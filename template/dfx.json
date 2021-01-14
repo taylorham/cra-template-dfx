@@ -1,0 +1,19 @@
+{
+  "canisters": {
+    "test": {
+      "main": "backend/test/main.mo",
+      "type": "motoko"
+    }
+  },
+  "defaults": {
+    "build": {
+      "output": "canisters/"
+    }
+  },
+  "networks": {
+    "local": {
+      "bind": "localhost:8000",
+      "type": "ephemeral"
+    }
+  }
+}

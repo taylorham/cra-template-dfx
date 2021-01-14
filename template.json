@@ -1,0 +1,29 @@
+{
+  "package": {
+    "dependencies": {
+      "@craco/craco": "^6.0.0",
+      "@dfinity/agent": "^0.6.17",
+      "@testing-library/jest-dom": "^5.11.4",
+      "@testing-library/react": "^11.1.0",
+      "@testing-library/user-event": "^12.1.10",
+      "@types/node": "^12.0.0",
+      "@types/react": "^17.0.0",
+      "@types/react-dom": "^17.0.0",
+      "@types/jest": "^26.0.19",
+      "typescript": "^4.1.2",
+      "web-vitals": "^1.0.1"
+    },
+    "scripts": {
+      "start": "craco start",
+      "build": "craco build",
+      "test": "craco test",
+      "eject": "craco eject",
+      "prestart": "dfx start --background; dfx deploy",
+      "poststart": "dfx stop"
+    },
+    "eslintConfig": {
+      "extends": ["react-app", "react-app/jest"]
+    },
+    "proxy": "http://localhost:8000"
+  }
+}
