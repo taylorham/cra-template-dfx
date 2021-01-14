@@ -1,29 +1,13 @@
 const webpack = require('webpack')
 const path = require('path')
+const generateAliases = require('./config/generateAliases').default
 
 module.exports = {
   plugins: [
     {
       plugin: {
         overrideWebpackConfig: ({ webpackConfig }) => {
-          const dfxJson = require(`${__dirname}/dfx.json`)
-
-          const aliases = Object.entries(dfxJson.canisters).reduce(
-            (acc, [name, value]) => {
-              const outputRoot = path.join(
-                __dirname,
-                `.dfx/local/${dfxJson.defaults.build.output}`,
-                name
-              )
-              const filename = path.basename(value.main, '.mo')
-              return {
-                ...acc,
-                ['ic:canisters/' + name]: path.join(outputRoot, name + '.js'),
-                ['ic:idl/' + name]: path.join(outputRoot, name + '.did.js'),
-              }
-            },
-            {}
-          )
+          const aliases = generateAliases()
 
           return {
             ...webpackConfig,
