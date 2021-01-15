@@ -27,4 +27,4 @@ cd my-app && npm start
 This spins up your `dfx` canister in the background and runs your React app with webpack-dev-server.
 
 
-> :tada:  Special thanks to Mio Quispe for their work on [`create-dfinity-app`](https://github.com/MioQuispe/create-dfinity-app) as inspiration and groundwork!
+> :tada:&nbsp;&nbsp;&nbsp;Special thanks to Mio Quispe for their work on [`create-dfinity-app`](https://github.com/MioQuispe/create-dfinity-app) as inspiration and groundwork!
