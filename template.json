@@ -2,7 +2,9 @@
   "package": {
     "dependencies": {
       "@craco/craco": "^6.0.0",
-      "@dfinity/agent": "^0.6.17",
+      "@dfinity/agent": "^0.9.3",
+      "@dfinity/candid": "^0.9.3",
+      "@dfinity/principal": "^0.9.3",
       "@testing-library/jest-dom": "^5.11.4",
       "@testing-library/react": "^11.1.0",
       "@testing-library/user-event": "^12.1.10",
