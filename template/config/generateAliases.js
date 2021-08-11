@@ -13,7 +13,7 @@ const generateAliases = () => {
       const filename = path.basename(value.main, ".mo");
       return {
         ...acc,
-        ["ic:canisters/" + name]: path.join(outputRoot, name + ".js"),
+        ["ic:canisters/" + name]: path.join(outputRoot),
         ["ic:idl/" + name]: path.join(outputRoot, name + ".did.js"),
       };
     },
