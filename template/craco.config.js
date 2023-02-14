@@ -1,6 +1,10 @@
 const webpack = require('webpack')
 const path = require('path')
 const generateAliases = require('./config/generateAliases').default
+const generateAliases = require('./config/generateAliases').default
+const { initCanisterIds } = require('./config/initCanisterIds')
+
+const canisters = initCanisterIds()
 
 module.exports = {
   plugins: [
@@ -15,6 +19,10 @@ module.exports = {
               ...webpackConfig.plugins,
               new webpack.ProvidePlugin({
                 ic: [path.resolve(path.join(__dirname, 'ic.js')), 'ic'],
+              }),
+              new webpack.EnvironmentPlugin({
+                NODE_ENV: 'development',
+                TEST_CANISTER_ID: canisters['test'],
               }),
             ],
             resolve: {

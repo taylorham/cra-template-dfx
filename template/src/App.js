@@ -2,7 +2,7 @@ import React, { useEffect, useState, useCallback } from 'react'
 import logo from './logo.svg'
 import './App.css'
 // Import canisters:
-import test from 'ic:canisters/test'
+import { test } from 'ic:canisters/test'
 
 function App() {
   const [val, setVal] = useState()
